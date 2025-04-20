@@ -1,0 +1,326 @@
+<!Doctype html>
+<html>
+<head> 
+<title> Shivayaas Food Products </title>
+<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+<link href="./dist/output.css" rel="stylesheet">
+</head>
+<body>
+<header id="main-header">
+<center>
+<!--Image-->
+<img id="logo" src="./Images/logo.png" alt="Shivaayaas logo">
+<script src="https://cdn.tailwindcss.com"></script>
+<!--<img id="logo" src="Images/logo.png" alt="Shivaayaas logo" width="200" height="100" style="float:left; margin:0 30px 0 0;">-->
+<!--<img src="Images/bname_txt.png" alt="Shivaayaas logo" width="300" height="100" style="float:left; margin:0 0 0 5px;">-->
+<div>
+	<h1 id="brand-name">SHIVAAYAAS FOOD PRODUCTS<span class="copyright">®</span></h1> <br>
+	<h2 id="slogan">PURE AND SWEET, A HEALTHY TREAT</h2>
+</div></center>
+
+   <!-- Cart Button -->
+   <button id="cart-btn" class="relative w-12 h-12 rounded-full bg-pink-500 text-white shadow-lg animate-bounce">
+    🛒
+    <span id="cart-count" class="absolute -top-1 -right-1 bg-green-500 text-xs w-5 h-5 flex items-center justify-center rounded-full">
+      0
+    </span>
+  </button>
+ </div>
+
+   
+</header>
+<nav>
+    <ul>
+        <li><a href="./all-products.html">Explore Shivaayaas</a></li>
+        <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
+        <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
+        <li><a href="wellness.html">
+            🌿 Visit Healthy Living
+          </a></li>
+        <li><a href="#contact-details">📞Contact Us</a></li>
+        <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
+            ❓ FAQ
+          </button>
+    </ul>
+</nav>
+
+
+
+<!-- 🔥 Deal of the Day Highlight (Centered, Glowy) -->
+<section class="bg-gradient-to-r from-yellow-100 to-yellow-50 border-b border-yellow-300 shadow-inner py-3 px-6 text-center relative">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <div class="flex items-center justify-center gap-2 glow-text">
+        <img id="deal-icon" src="./Images/deal-icon.png" alt="Deal Icon" class="w-7 h-7 glow-icon" />
+        <p class="text-lg sm:text-xl font-bold text-yellow-800">
+          🔥 Deal of the Day: Corn Laddu at ₹180 + Free Shipping!
+        </p>
+      </div>
+     
+    </div>
+    <a href="deal-of-the-day.html" class="bg-green-500 text-white font-semibold px-4 py-1.5 rounded-lg shadow hover:bg-yellow-600 transition duration-300 transform hover:scale-105 mt-3"
+    style="text-decoration: none; display: inline-block;">
+    Grab Now →
+ </a>
+  </section>
+  
+<div class="mb-8 flex justify-center">
+    <input
+      type="text"
+      placeholder="Search for a product..."
+      class="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+    />
+  </div>
+  
+
+<section class="brand-section">
+	<div class="brand-info">
+        <h2>Shivaayaas Vision: A Mother’s Dream, A Community’s Health</h2>
+        <p>
+			At Shivaayaas Food Products, we are more than a business—we are a movement inspired by love, resilience, and a deep commitment to building a healthier society. Our journey began humbly as a small neighborhood shop, driven by the vision of a single mother who sought to share the timeless benefits of Marabu Unavu—the nutritive treasures of Tamil traditional food—with the world.
+
+From the start, we have been guided by the belief that everyone deserves access to wholesome, heritage-rich food that promotes vitality and well-being. As we grow, our mission remains the same: to preserve the essence of tradition while empowering individuals to lead active and healthy lives.
+
+Together, as Shivaayaas, we strive to inspire a return to authentic, nutritious eating habits—turning ancient wisdom into a modern way of life. This is more than a business for us; it is our heartfelt dream to create a lasting legacy of health and happiness, one meal and one community at a time.
+	
+        </p>
+    </div>
+    <div class="brand-categories">
+        <div class="category-title">Categories</div>
+		<div class="context-container">
+			<div class="context-item">Millet Laddu</div>
+			<div class="context-item">Health Mix</div>
+			<div class="context-item">Millet Poridge Mix</div>
+		</div>
+    </div>
+</section>
+
+<div class="slider-container">
+	<div class="slider">
+		<div class="slide"><img src="./Images/Shivaayaas Business Profile.jpg" alt="Image 4"></div>
+		<div class="slide"><img src="./Images/Corn_Product_Details.webp" alt="Image 1"></div>
+		<div class="slide"><img src="./Images/Mappillai_Samba_Laddu_Benefits_English.jpg" alt="Image 2"></div>
+		<div class="slide"><img src="./Images/Mappillai_Samba_Laddu_Product_Details_F&B_images.jpg" alt="Image 3"></div>
+		<div class="slide"><img src="./Images/delivery_service_jpeg.jpg" alt="Image 5"></div>
+	</div>
+	<button class="prev" onclick="prevSlide()">&#10094;</button>
+	<button class="next" onclick="nextSlide()">&#10095;</button>
+
+	<div class="dots">
+		<span class="dot" onclick="setSlide(0)"></span>
+		<span class="dot" onclick="setSlide(1)"></span>
+		<span class="dot" onclick="setSlide(2)"></span>
+		<span class="dot" onclick="setSlide(3)"></span>
+		<span class="dot" onclick="setSlide(4)"></span>
+	</div>
+</div>
+
+
+<section class="shop-by-categories">
+    <h2>Shop by Categories</h2>
+    <div class="categories-container">
+        <div class="category-card">
+           <a href="shivaaayaas_health_mix.html">
+            <img src="./Images/Healthmix.jpg" alt="Health Mix">
+            <p>Health Mix</p></a>
+        </div>
+        <div class="category-card">
+            <a href="shivaaayaas_health_mix.html"> <img src="./Images/Healthmix.jpg" alt="Healthy Snacks">
+            <p>Poridge Mix Powders</p></a>
+        </div>
+        <div class="category-card">
+            <a href="shivaayaas-laddus.html"> <img src="./Images/Laddu.jpg" alt="Laddus">
+            <p>Millet Laddus</p></a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ❓ FAQ Modal Popup -->
+<div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white max-w-2xl w-full p-6 rounded-xl shadow-lg relative overflow-y-auto max-h-[80vh]">
+      <button onclick="closeFAQ()" class="absolute top-3 right-3 text-red-500 text-xl font-bold">×</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">❓ Frequently Asked Questions</h2>
+      
+      <div class="space-y-3 text-sm text-gray-700">
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">What makes Shivaayaas laddus healthy?</summary>
+          <p class="mt-2">Made from traditional millets, naturally sweetened, and 100% preservative free.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Are these suitable for kids?</summary>
+          <p class="mt-2">Yes! Ideal for children above 1 year old.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">How to place an order?</summary>
+          <p class="mt-2">You can order directly via WhatsApp from any product page.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Do you ship outside Tamil Nadu?</summary>
+          <p class="mt-2">Yes, we ship across India. Bulk orders welcome.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+   <script>
+    function openFAQ() {
+      document.getElementById("faq-modal").classList.remove("hidden");
+    }
+    function closeFAQ() {
+      document.getElementById("faq-modal").classList.add("hidden");
+    }
+  </script>
+
+<!-- Footer Information -->
+
+<section id="contact-details" class="bg-white text-center py-10 px-4 border-t border-green-200">
+    <div class="max-w-6xl mx-auto">
+        <h2>👉 "Shivaayaas Food Products – Pure Goodness, Naturally!" 👈</h2>
+        <p>
+            💛 "Shivaayaas began as a small dream, built on trust and belief. 
+			With the love and support of our customers, we have grown from humble beginnings to serving over 10,000 happy customers today. Every order, every smile, and every word of encouragement gives us the strength to work harder and bring you the best. Shivaayaas isn’t just a brand – it’s a family, and you are a part of our journey!".
+        </p>
+        
+        <div class="icons-container">
+            <div class="icon-box">
+                <img src="./Images/safe-payment-icon.png" alt="Safe & Secure Payment">
+                <p>Safe & Secure Payment</p>
+            </div>
+            <div class="icon-box">
+                <img src="./Images/multiple-payment-icon.png" alt="Multiple Payment Options">
+                <p>Support Different type of Payments</p>
+            </div>
+            <div class="icon-box">
+                <img src="./Images/support-icon.webp" alt="24/7 Support">
+                <p>24hours/7days Support</p>
+            </div>
+            <div class="icon-box">
+                <img src="./Images/fast-shipping-icon.png" alt="Fast Shipping">
+                <p>Safe & Fast Shipping</p>
+            </div>
+            <div class="icon-box">
+                <img src="./Images/best-price-icon.png" alt="Best Price Guaranteed">
+                <p>Best Price Guaranteed</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h3>Follow us on:</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://wa.me/919715661550"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
+            </div>
+            <p><strong>Call us:</strong> +91-9600254264</p>
+            <p><strong>Email us:</strong> shivaayaasfoodproducts@gmail.com</p>
+        </div>
+    </div>
+	 <!-- 🧾 Footer Bottom -->
+     <div class="mt-8 text-sm text-gray-500">
+        <p>&copy; 2024 Shivaayaas Food Products. All Rights Reserved.</p>
+        <p>Designed by <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b" target="_blank" class="text-green-600 hover:underline">Sundarpandi Pandiaraj</a></p>
+      </div>
+    </div>
+</section>
+
+<!-- Floating Buttons Wrapper -->
+<div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+  
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919715661550" target="_blank"
+       class="bg-green-500 hover:bg-green-600 text-white p-8 rounded-full shadow-lg transition-transform hover:scale-105 transform duration-200 ease-in-out">
+      <img src="./Images/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" />
+    </a>  
+  </div>
+
+<!--<footer>
+    <div class="footer-container">
+        <div class="about-section">
+            <h3>👉 "Shivaayaas – Pure Goodness, Naturally!"</h3>
+            <p>💛 "Shivaayaas began as a small dream, built on trust and belief. With the love and support of our customers, we have grown from humble beginnings to serving over 10,000 happy customers today. Every order, every smile, and every word of encouragement gives us the strength to work harder and bring you the best. Shivaayaas isn’t just a brand – it’s a family, and you are a part of our journey!"</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-item">
+                <h4>Safe & Secure</h4>
+                <p>Payments</p>
+            </div>
+            <div class="service-item">
+                <h4>Multiple Payment</h4>
+                <p>Options Available</p>
+            </div>
+            <div class="service-item">
+                <h4>24/7 Support</h4>
+                <p>Customer Assistance</p>
+            </div>
+            <div class="service-item">
+                <h4>Fast Shipping</h4>
+                <p>Nationwide Delivery</p>
+            </div>
+            <div class="service-item">
+                <h4>Best Price</h4>
+                <p>Guaranteed</p>
+            </div>
+        </div>
+        
+        <div class="contact-details">
+            <h4>Follow us on:</h4>
+            <p>Call us: +91-XXXXXXXXXX</p>
+            <p>Email: support@shivaayaas.com</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Shipping & Returns</a>
+        </div>
+    </div>
+ 			
+</footer>-->
+
+
+
+<!-- 🛒 Cart Sidebar Modal -->
+<!-- ✅ Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 z-[9999] flex items-start justify-end hidden backdrop-blur-sm">
+    <div id="cart-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  
+   <!-- Sidebar -->
+   <div id="cart-sidebar" class="relative bg-white w-80 h-[calc(130vh-90px)] mt-[90px] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-[10000] rounded-l-xl">
+      <!-- Your cart content here -->
+      <!-- Add pt-6 to give breathing room -->
+      <div class="p-9 flex flex-col h-full">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold">🛍️ Your Cart</h2>
+          <button id="close-cart" class="text-red-600 text-2xl font-bold">×</button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto space-y-3"></div>
+  
+        <div class="mt-4 border-t pt-4">
+          <div class="flex justify-between text-lg font-semibold mb-3">
+            <span>Total:</span>
+            <span>₹<span id="cart-total">0</span></span>
+          </div>
+          <a id="whatsapp-checkout" href="#" target="_blank"
+             class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
+            Checkout via WhatsApp
+          </a>
+          <button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="./Javascript/home.js"></script>
+<script src="./Javascript/cart.js"></script>
+<script>
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+        window.location.href = "admin-login.html";
+      }
+    });
+  </script>
+</body>
+
+</html>
