@@ -478,7 +478,14 @@ nav ul li a:hover {
         padding: 10px 0;
         border-bottom: 1px solid #eaeaea;
     }
-  
+  .cart-footer {
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
+    }
+    
     #floating-icons {
         transition: transform 0.2s ease;
       }
