@@ -463,10 +463,8 @@
 <!-- ✅ Cart Modal -->
 <div id="cart-modal" class="fixed inset-0 z-[9999] flex items-start justify-end hidden backdrop-blur-sm">
     <div id="cart-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
-  
-  
-   <!-- Sidebar -->
-   <div id="cart-sidebar" class="relative bg-white w-80 h-[calc(130vh-90px)] mt-[90px] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-[10000] rounded-l-xl">
+     <!-- Sidebar -->
+   <div id="cart-sidebar" class="relative bg-white w-80 h-[calc(130vh-90px)] mt-[70px] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-[10000] rounded-l-xl">
       <!-- Your cart content here -->
       <!-- Add pt-6 to give breathing room -->
       <div class="p-9 flex flex-col h-full">
@@ -475,12 +473,16 @@
           <button id="close-cart" class="text-red-600 text-2xl font-bold">×</button>
         </div>
         <div id="cart-items" class="flex-1 overflow-y-auto space-y-3"></div>
+		
   
-        <div class="mt-4 border-t pt-4">
+        <div class="mt-2 border-t pt-4">
           <div class="flex justify-between text-lg font-semibold mb-3">
             <span>Total:</span>
             <span>₹<span id="cart-total">0</span></span>
           </div>
+		 </div>
+		  <div class="cart-footer">
+		  <textarea id="customer-note" rows="2" placeholder="📝 Custom packaging? Bulk order next time? Type it here!" class="w-full p-2 border rounded mb-4 text-sm"></textarea>
           <a id="whatsapp-checkout" href="#" target="_blank"
              class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
             Checkout via WhatsApp
@@ -517,9 +519,23 @@
     document.getElementById("reviews-modal").classList.add("hidden");
   }
 </script>
-
+<script>
+  // Load count on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+      const cart = JSON.parse(localStorage.getItem("shivaayaasCart")) || [];
+      const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = totalQty;
+    }
+  });
+</script>
+<script src="./Javascript/all-products.js"></script>
 <script src="./Javascript/home.js"></script>
+<script src="./Javascript/productData.js"></script>
+<script src="./Javascript/product-detail.js"></script>
 <script src="./Javascript/cart.js"></script>
+
 
 </body>
 
