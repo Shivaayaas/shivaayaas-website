@@ -31,10 +31,6 @@ const relatedContainer = document.getElementById("related-products");
     `).join("");
   }
 
-// ✅ WhatsApp Message
-if (customerNote) {
-  message += `%0A📌 *Note:* ${customerNote}`;
-}
 
 
 // ✅ Clear Cart
@@ -126,11 +122,26 @@ function updateCartSidebar() {
     });
   }
 
+  
+  
+
+
+document.getElementById("whatsapp-checkout").addEventListener("click", (e) => {
+  const note = document.getElementById("customer-note")?.value || "";
+  const summaryText = cart.map(item => `${item.name} - Qty: ${item.quantity}`).join('%0A');
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   cartTotal.textContent = total;
 
-  const summaryText = cart.map(item => `${item.name} - Qty: ${item.quantity}`).join('%0A');
-  whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}`;
+  const message = `Hi Shivaayaas, I would like to order:%0A${summaryText}%0ATotal: ₹${total}%0A%0A📝 Note: ${note}`;
+  const waUrl = `https://wa.me/919715661550?text=${message}`;
+
+  window.open(waUrl, "_blank");
+});
+
+
+  /*whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}`;*/
+  // Updated WhatsApp link with note
+  /*whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}%0A%0A📝 Note: ${encodeURIComponent(note)}`;*/
 
   whatsappCheckout.addEventListener("click", function (e) {
     if (cart.length === 0) {
