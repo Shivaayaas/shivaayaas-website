@@ -133,15 +133,10 @@ document.getElementById("whatsapp-checkout").addEventListener("click", (e) => {
   cartTotal.textContent = total;
 
   const message = `Hi Shivaayaas, I would like to order:%0A${summaryText}%0ATotal: ₹${total}%0A%0A📝 Note: ${note}`;
-  const waUrl = `https://wa.me/919715661550?text=${message}`;
+  const waUrl = `https://wa.me/919600254264?text=${message}`;
 
   window.open(waUrl, "_blank");
 });
-
-
-  /*whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}`;*/
-  // Updated WhatsApp link with note
-  /*whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}%0A%0A📝 Note: ${encodeURIComponent(note)}`;*/
 
   whatsappCheckout.addEventListener("click", function (e) {
     if (cart.length === 0) {

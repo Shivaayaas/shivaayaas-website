@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p class="text-gray-600 mb-4">${product.info}</p>
         <p class="text-gray-700 mb-6">${product.desc}</p>
 
-        <a href="https://wa.me/919715661550?text=Hi%2C%20I%20want%20to%20order%20${encodeURIComponent(product.name)}" target="_blank"
+        <a href="https://wa.me/919600254264?text=Hi%2C%20I%20want%20to%20order%20${encodeURIComponent(product.name)}" target="_blank"
           class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition">
           🟢 Order Now on WhatsApp
         </a>

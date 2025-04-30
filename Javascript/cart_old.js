@@ -65,7 +65,7 @@ function updateCartSidebar() {
   cartTotal.textContent = total;
 
   const summaryText = cart.map(item => `${item.name} - Qty: ${item.quantity}`).join('%0A');
-  whatsappCheckout.href = `https://wa.me/919715661550?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}`;
+  whatsappCheckout.href = `https://wa.me/919600254264?text=Hi%20Shivaayaas,%20I%20would%20like%20to%20order:%0A${summaryText}%0ATotal:%20₹${total}`;
 
   updateCartCount();
   saveCart();

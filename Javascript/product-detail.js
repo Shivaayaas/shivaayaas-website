@@ -192,7 +192,7 @@ else {
     });
 
     message += `--------------------%0A*Total: ₹${total}*%0A%0A🛵 Please deliver to:`;
-    const whatsappLink = `https://wa.me/919715661550?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/919600254264?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
   });
 
@@ -205,7 +205,7 @@ else {
 document.getElementById("whatsapp-contact-btn")?.addEventListener("click", (e) => {
   e.preventDefault();
   const message = "Hello! I was browsing your website and found your products very interesting. I have a few questions and would love to know more! Could you also share some FAQs or additional details about your products?";
-  const whatsappLink = `https://wa.me/919715661550?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/919600254264?text=${encodeURIComponent(message)}`;
   window.open(whatsappLink, "_blank");
 });
 
