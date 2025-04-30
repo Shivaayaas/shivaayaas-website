@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/</loc>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/all-products.html</loc>
+  </url>
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/shivaayaas-laddus.html</loc>
+  </url>
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/shivaaayaas_health_mix.html</loc>
+  </url>
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/wellness.html</loc>
+  </url>
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/deal-of-the-day.html</loc>
+  </url>
+  <url>
+    <loc>https://shivaayaas.github.io/shivaayaas-website/customer-reviews.html</loc>
+  </url>
+
+</urlset>
