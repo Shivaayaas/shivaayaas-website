@@ -1690,3 +1690,20 @@ video {
     padding-right: 5rem;
   }
 }
+
+
+/* Highlight Animation */
+/* This animation will make the element pulse slightly to draw attention */
+/* You can adjust the scale and duration as needed */
+/* Example usage: <div class="highlight">Highlight me!</div> */
+.highlight {
+  animation: pulse 2s infinite;
+  font-weight: bold;
+  color: #2f855a; /* Tailwind's green-700 */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,52 +1,93 @@
 <!Doctype html>
 <html>
 <head> 
-
-<title> Shivayaas Food Products </title>
+<title> Shivayaas Health Mix</title>
 <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body>
-<!--Header Style-->
-<link rel="stylesheet" type="text/css" href="./CSS/style.css">
-<link href="./dist/output.css" rel="stylesheet">
+<header id="main-header">
+<center>
+<!--Image-->
+<img id="logo" src="./Images/logo.png" alt="Shivaayaas logo">
 <script src="https://cdn.tailwindcss.com"></script>
-<!-- SwiperJS for Image Slider -->
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<body class="bg-gray-50 text-gray-800">
+<!--<img id="logo" src="Images/logo.png" alt="Shivaayaas logo" width="200" height="100" style="float:left; margin:0 30px 0 0;">-->
+<!--<img src="Images/bname_txt.png" alt="Shivaayaas logo" width="300" height="100" style="float:left; margin:0 0 0 5px;">-->
+<div>
+	<h1 id="brand-name">SHIVAAYAAS FOOD PRODUCTS<span class="copyright">®</span></h1> <br>
+	<h2 id="slogan">PURE AND SWEET, A HEALTHY TREAT</h2>
+</div></center>
 
-  <!-- ✅ Sticky Header -->
-<header id="main-header" class="sticky top-0 z-50 bg-white shadow">
-  <!-- Shivaayaas Logo + Brand Name -->
-  <img id="logo" src="./Images/logo.png" alt="Shivaayaas logo" class="h-14 w-auto ml-4 mt-2" />
-  <div class="flex flex-col justify-center ml-3">
-    <h1 class="text-lg sm:text-xl font-bold text-green-500 leading-tight">
-      SHIVAAYAAS FOOD PRODUCTS<span class="text-sm align-super">®</span>
-    </h1>
-    <h2 class="text-sm sm:text-base text-green-50 leading-tight -mt-1">
-      PURE AND SWEET, A HEALTHY TREAT
-    </h2>
-  </div>
+
+   
 </header>
-<nav>
-  <ul>
+<!--<nav>
+    <ul>
+        <li><a href="./all-products.html">Explore Shivaayaas</a></li>
+        <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
+        <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
+        <li><a href="wellness.html">
+            🌿 Visit Healthy Living
+          </a></li>
+        <li><a href="#contact-details">📞Contact Us</a></li>
+        <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
+            ❓ FAQ
+          </button>
+    </ul>
+</nav>-->
+
+<nav class="bg-white shadow-md px-4 py-3 relative z-50">
+  <div class="flex justify-between items-center max-w-6xl mx-auto">
+    <a href="index.html" class="text-lg font-bold text-green-700">Menu ➡</a>
+
     
-      <li><a href="index.html">Home🏠</a></li>
-    <li><a href="./all-products.html">Explore Shivaayaas</a></li>
-      <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
-      <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
-      <li><a href="wellness.html">
-          🌿 Visit Healthy Living
-        </a></li>
-      <li><a href="#contact-details">📞Contact Us</a></li>
-      <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
-          ❓ FAQ
-        </button>
-  </ul>
+ <!-- 🔽 Hamburger for Mobile -->
+<button id="menu-btn" class="sm:hidden text-3xl px-2 py-1 focus:outline-none text-green-700 border border-green-200 rounded-md shadow">
+  ☰
+</button>
+
+
+    <!-- ✅ Desktop Navigation -->
+    <ul id="nav-links" class="hidden sm:flex space-x-10 text-sm text-gray-700 font-semibold">
+        <li><a href="./all-products.html">Explore Shivaayaas</a></li>
+        <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
+        <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
+		<li><a href="shivaayaas_poridge_mix.html">Shivaayaas Poridge Mix</a></li>
+        <li><a href="wellness.html">
+            🌿 Visit Healthy Living
+          </a></li>
+        <li><a href="#contact-details">📞Contact</a></li>
+        <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
+            ❓ FAQ
+          </button>
+    </ul>
+  </div>
+
+<!-- ✅ Refined Mobile Menu Overlay -->
+<div id="mobile-overlay" class="fixed top-16 right-4 w-[85vw] max-w-sm bg-white border border-gray-300 rounded-xl shadow-xl z-[9999] hidden flex flex-col px-6 py-5 space-y-4 text-base font-medium text-green-800 transition-all duration-300 ease-in-out">
+
+  <a href="index.html" onclick="toggleMenu()" class="border-b pb-2">🏠 Home</a>
+  <a href="all-products.html" onclick="toggleMenu()" class="border-b pb-2">All Categories</a>
+  <a href="shivaaayaas_health_mix.html" onclick="toggleMenu()" class="border-b pb-2">Health Mix</a>
+  <a href="shivaayaas-laddus.html" onclick="toggleMenu()" class="border-b pb-2">Laddus</a>
+  <a href="shivaayaas_poridge_mix.html" onclick="toggleMenu()" class="border-b pb-2">Poridge Mix</a>
+  <a href="deal-of-the-day.html" onclick="toggleMenu()" class="border-b pb-2">🎁 Grab the Offer</a>
+  <a href="wellness.html" onclick="toggleMenu()" class="border-b pb-2">🌿 Healthy Living</a>
+  <a href="#contact-details" onclick="toggleMenu()" class="border-b pb-2">📞 Contact</a>
+
+  <button onclick="openFAQ(); toggleMenu()" class="w-full mt-2 bg-green-600 text-white py-2 rounded-lg shadow hover:bg-green-700 transition">
+    ❓ FAQ
+  </button>
+
+  <button onclick="toggleMenu()" class="absolute top-2 right-3 text-2xl text-red-600 font-bold">×</button>
+</div>
+
+
 </nav>
+
 
 
 <!-- 🔥 Deal of the Day Highlight (Centered, Glowy) -->
@@ -83,80 +124,247 @@
  </button>
 </div>
 
-
 <section class="bg-white py-16 px-4 sm:px-6 lg:px-20" id="all-products" >
-      <!--
-      <div class="mb-8 text-center space-x-3">
-        <button class="category-filter px-4 py-2 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition" data-category="all">All</button>
-        <button class="category-filter px-4 py-2 rounded-full bg-gray-200 text-green-700 font-medium hover:bg-green-100 transition" data-category="laddu">Laddus</button>
-        <button class="category-filter px-4 py-2 rounded-full bg-gray-200 text-green-700 font-medium hover:bg-green-100 transition" data-category="healthmix">Health Mix</button>
-        <button class="category-filter px-4 py-2 rounded-full bg-gray-200 text-green-700 font-medium hover:bg-green-100 transition" data-category="porridge">Porridge Mix</button>
-      </div>
-      --> <h2 class="text-4xl font-bold mb-16 text-center text-green-800">Healthmix - Ensure Complete Balanced Nutrition</h2>
+<h2 class="text-4xl font-bold mb-16 text-center text-green-800">Healthmix - Ensure Complete Balanced Nutrition</h2>
       
-
-    <!-- 🧱 PRODUCT GRID CONTAINER -->
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 center mt-10">
-
   
-    <!-- 🌟 Product 1: HealthMix 34 Ingredients -->
-    <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-        <img src="./Images/Healthmix34/1.png" alt="HealthMix 34 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-      </div>
-      <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 34 Ingredients</h3>
-      <p class="text-green-700 font-semibold mb-1">₹240</p>
-      <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
-      <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain porridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages.</p>
-      <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-              data-name="HealthMix 34 Ingredients"
-              data-price="240">Add to Cart</button> -->
-             <!-- <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-              data-id="101"
-              data-name="HealthMix 34 Ingredients"
-              data-price="240"
-              data-description="100% natural multigrain porridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages."
-              data-image="./Images/Healthmix.jpg"
-              data-weight="250g"
-              data-tags="Organic, Gelatine Free"
-              data-benefits="Boosts Immunity,Made with 34 traditional ingredients,Perfect for all age groups"
-      >View Product</button>-->
-      <a href="product-detail.html?product=healthmix34"
-      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
-      View Product
-   </a>
-       
+
+  <!-- 🧱 PRODUCT GRID CONTAINER -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+
+<!-- 🌟 Product 1: HealthMix 34 Ingredients -->
+  <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
+    <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+      <img src="./Images/Healthmix34/1.png" alt="HealthMix 34 Ingredients"
+           class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
     </div>
-  
-    <!-- 🌟 Product 2: HealthMix 15 Ingredients -->
-    <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="102" data-category="healthmix">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-        <img src="./Images/Healthmix.jpg" alt="HealthMix 15 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-      </div>
-      <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 15 Ingredients</h3>
-      <p class="text-green-700 font-semibold mb-1">₹170</p>
-      <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
-      <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain porridge for everyday nutrition. Ideal for all age groups with immunity-boosting benefits.</p>
-    <!-- Health Mix 15 -->
+    <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 34 Ingredients</h3>
+    <p class="text-green-700 font-semibold mb-1">₹240</p>
+    <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
+    <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain Poridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages.</p>
+    <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+            data-name="HealthMix 34 Ingredients"
+            data-price="240">Add to Cart</button> -->
+           <!-- <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+            data-id="101"
+            data-name="HealthMix 34 Ingredients"
+            data-price="240"
+            data-description="100% natural multigrain Poridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages."
+            data-image="./Images/Healthmix.jpg"
+            data-weight="250g"
+            data-tags="Organic, Gelatine Free"
+            data-benefits="Boosts Immunity,Made with 34 traditional ingredients,Perfect for all age groups"
+    >View Product</button>-->
+    <a href="product-detail.html?product=healthmix34"
+    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+ </a>
+     
+  </div>
+
+  <!-- 🌟 Product 2: HealthMix 15 Ingredients -->
+  <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="102" data-category="healthmix">
+    <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+      <img src="./Images/Healthmix.jpg" alt="HealthMix 15 Ingredients"
+           class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+    </div>
+    <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 15 Ingredients</h3>
+    <p class="text-green-700 font-semibold mb-1">₹170</p>
+    <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
+    <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain Poridge for everyday nutrition. Ideal for all age groups with immunity-boosting benefits.</p>
+  <!-- Health Mix 15 -->
 <a href="product-detail.html?product=healthmix15"
 class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
 View Product
 </a>
+  </div>
+
+</div>
+
+
+  
+</section>
+<!-- 🌟 Customer Reviews Section -->
+<section class="bg-yellow-50 py-10 px-4 text-center">
+  <h2 class="text-2xl font-bold text-yellow-800 mb-6">🌟 What Our Customers Say</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <!-- Testimonial Card -->
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Authentic taste with traditional values. My kids love the Ragi laddu!"</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Aishwarya R, Chennai</p>
     </div>
-  
-  
+
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Health mix is part of our daily breakfast now. Highly recommended!"</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Vignesh K, Hosur</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Fast shipping, secure packaging, and amazing customer support."</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Revathi M, Coimbatore</p>
+    </div>
+
+  </div>
+  <br>
+<button onclick="openReviews()"
+  class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 animate-pulse hover:scale-105">
+  Click Here to See More Reviews
+</button>
+
+</section>
+<!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-[9999]">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl p-6 relative max-h-[80vh] overflow-y-auto">
+
+    <!-- Close Button -->
+    <button onclick="closeReviews()" class="absolute top-3 right-4 text-red-500 text-2xl font-bold">×</button>
+
+    <h2 class="text-2xl font-bold mb-4 text-yellow-700 text-center">🌟 Customer Reviews</h2>
+ <!-- External Link -->
+    <div class="text-center mt-6">
+      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="text-sm text-blue-600 underline hover:text-blue-800">
+        🔗 View All Google Reviews
+      </a>
+    </div>
+	<br>
+    <div class="space-y-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Amazing quality and authentic taste! Totally worth it."</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Kavitha S</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Shivaayaas Health Mix is now part of our morning routine. Great energy!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Rajesh P</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"The best millet laddus in town. Healthy and tasty!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Anitha M</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Great customer support and super fast delivery. Keep it up!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Prakash K</p>
+      </div>
+    </div>
+
+ 
+  </div>
+</div>
+
+
+
+
+
+<!-- ❓ FAQ Modal Popup -->
+<div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white max-w-2xl w-full p-6 rounded-xl shadow-lg relative overflow-y-auto max-h-[80vh]">
+      <button onclick="closeFAQ()" class="absolute top-3 right-3 text-red-500 text-xl font-bold">×</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">❓ Frequently Asked Questions</h2>
+      
+      <div class="space-y-3 text-sm text-gray-700">
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">What makes Shivaayaas laddus healthy?</summary>
+          <p class="mt-2">Made from traditional millets, naturally sweetened, and 100% preservative free.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Are these suitable for kids?</summary>
+          <p class="mt-2">Yes! Ideal for children above 1 year old.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">How to place an order?</summary>
+          <p class="mt-2">You can order directly via WhatsApp from any product page.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Do you ship outside Tamil Nadu?</summary>
+          <p class="mt-2">Yes, we ship across India. Bulk orders welcome.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+   <script>
+    function openFAQ() {
+      document.getElementById("faq-modal").classList.remove("hidden");
+    }
+    function closeFAQ() {
+      document.getElementById("faq-modal").classList.add("hidden");
+    }
+  </script>
+
+
+<!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex justify-center items-center">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full shadow-lg relative">
+    <button onclick="closeReviews()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+    <h2 class="text-xl font-bold mb-4 text-center text-green-700">🌟 Happy Customers</h2>
     
-  </section>
+    <div class="space-y-3 text-sm text-gray-700">
+      <p><strong>🛍️ Priya S:</strong> "Authentic taste, healthy and amazing quality!"</p>
+      <p><strong>🍯 Ram K:</strong> "Delicious laddus, super fast shipping."</p>
+      <p><strong>🌾 Devi M:</strong> "Energy levels boosted after using Shivaayaas health mix!"</p>
+      <p><strong>🥣 Karthik R:</strong> "Poridge mix was so tasty, pure ingredients."</p>
+      <p><strong>👩‍🦰 Meena V:</strong> "Reminded me of home-made traditional recipes. ❤️"</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full transition">
+        📖 See All Reviews on Google
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openReviews() {
+  document.getElementById("reviews-modal").classList.remove("hidden");
+}
+function closeReviews() {
+  document.getElementById("reviews-modal").classList.add("hidden");
+}
+</script>
 
 
-
+<!-- ❓ FAQ Modal Popup -->
+<div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white max-w-2xl w-full p-6 rounded-xl shadow-lg relative overflow-y-auto max-h-[80vh]">
+      <button onclick="closeFAQ()" class="absolute top-3 right-3 text-red-500 text-xl font-bold">×</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">❓ Frequently Asked Questions</h2>
+      
+      <div class="space-y-3 text-sm text-gray-700">
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">What makes Shivaayaas laddus healthy?</summary>
+          <p class="mt-2">Made from traditional millets, naturally sweetened, and 100% preservative free.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Are these suitable for kids?</summary>
+          <p class="mt-2">Yes! Ideal for children above 1 year old.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">How to place an order?</summary>
+          <p class="mt-2">You can order directly via WhatsApp from any product page.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Do you ship outside Tamil Nadu?</summary>
+          <p class="mt-2">Yes, we ship across India. Bulk orders welcome.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+   <script>
+    function openFAQ() {
+      document.getElementById("faq-modal").classList.remove("hidden");
+    }
+    function closeFAQ() {
+      document.getElementById("faq-modal").classList.add("hidden");
+    }
+  </script>
 
 <!-- Footer Information -->
 
 <section id="contact-details" class="bg-white text-center py-10 px-4 border-t border-green-200">
-  <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <h2>👉 "Shivaayaas Food Products – Pure Goodness, Naturally!" 👈</h2>
         <p>
             💛 "Shivaayaas began as a small dream, built on trust and belief. 
@@ -189,21 +397,82 @@ View Product
         <div class="contact-info">
             <h3>Follow us on:</h3>
             <div class="social-icons">
-              <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/facebook-icon.png" alt="Facebook"></a>
-              <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/instagram-icon.png" alt="Instagram"></a>
-              <a href="https://wa.me/919715661550"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
-          </div>
+                <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/instagram-icon.png" alt="Instagram"></a>
+                <a href="https://wa.me/919715661550" id="whatsapp-contact-btn"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
+            </div>
             <p><strong>Call us:</strong> +91-9600254264</p>
             <p><strong>Email us:</strong> shivaayaasfoodproducts@gmail.com</p>
         </div>
     </div>
 	 <!-- 🧾 Footer Bottom -->
+	 
+	  <div class="flex flex-col items-center space-y-2 mb-4">
+    <p class="text-gray-700 font-semibold">FSSAI License No: <span class="text-green-700 font-bold">22423431000209</span></p>
+    <p class="text-gray-700 font-semibold">GST No: <span class="text-green-700 font-bold">33MWVPS5505F1ZW</span></p>
+  </div>
    <div class="mt-8 text-sm text-gray-500">
     <p>&copy; 2024 Shivaayaas Food Products. All Rights Reserved.</p>
-    <p>Designed by <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b" target="_blank" class="text-green-600 hover:underline">Sundarpandi Pandiaraj</a></p>
+   <p>Designed with ❤️ by 
+    <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+       target="_blank" class="text-green-700 hover:underline font-semibold">
+       Sundarpandi Pandiaraj
+    </a>
+  </p>
   </div>
-</div>
+    </div>
 </section>
+
+<!--<footer>
+    <div class="footer-container">
+        <div class="about-section">
+            <h3>👉 "Shivaayaas – Pure Goodness, Naturally!"</h3>
+            <p>💛 "Shivaayaas began as a small dream, built on trust and belief. With the love and support of our customers, we have grown from humble beginnings to serving over 10,000 happy customers today. Every order, every smile, and every word of encouragement gives us the strength to work harder and bring you the best. Shivaayaas isn’t just a brand – it’s a family, and you are a part of our journey!"</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-item">
+                <h4>Safe & Secure</h4>
+                <p>Payments</p>
+            </div>
+            <div class="service-item">
+                <h4>Multiple Payment</h4>
+                <p>Options Available</p>
+            </div>
+            <div class="service-item">
+                <h4>24/7 Support</h4>
+                <p>Customer Assistance</p>
+            </div>
+            <div class="service-item">
+                <h4>Fast Shipping</h4>
+                <p>Nationwide Delivery</p>
+            </div>
+            <div class="service-item">
+                <h4>Best Price</h4>
+                <p>Guaranteed</p>
+            </div>
+        </div>
+        
+        <div class="contact-details">
+            <h4>Follow us on:</h4>
+            <p>Call us: +91-XXXXXXXXXX</p>
+            <p>Email: support@shivaayaas.com</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Shipping & Returns</a>
+        </div>
+    </div>
+ 			
+</footer>-->
+
+
+
+
 <!-- 🛒 Cart Sidebar Modal -->
 <!-- ✅ Cart Modal -->
 <div id="cart-modal" class="fixed inset-0 z-[9999] flex items-start justify-end hidden backdrop-blur-sm">
@@ -230,13 +499,34 @@ View Product
            class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
           Checkout via WhatsApp
         </a>
-        <button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button>
+		<button id="clear-cart" class="w-full text-center bg-red-100 hover:bg-red-200 text-red-700 py-2 rounded-lg">🧹 Clear Cart</button>
+        <!--<button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button> -->
       </div>
     </div>
   </div>
 </div>
-  
+
 <script src="./Javascript/all-products.js"></script>
+<script src="./Javascript/home.js"></script>
 <script src="./Javascript/cart.js"></script>
+<script>
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+        window.location.href = "admin-login.html";
+      }
+    });
+  </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-overlay");
+    menu.classList.toggle("hidden");
+  }
+
+  document.getElementById("menu-btn")?.addEventListener("click", toggleMenu);
+</script>
+
+
 </body>
+
 </html>

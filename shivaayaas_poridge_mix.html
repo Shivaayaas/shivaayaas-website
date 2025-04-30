@@ -21,14 +21,7 @@
 	<h2 id="slogan">PURE AND SWEET, A HEALTHY TREAT</h2>
 </div></center>
 
-   <!-- Cart Button -->
-   <button id="cart-btn" class="relative w-12 h-12 rounded-full bg-pink-500 text-white shadow-lg animate-bounce">
-    🛒
-    <span id="cart-count" class="absolute -top-1 -right-1 bg-green-500 text-xs w-5 h-5 flex items-center justify-center rounded-full">
-      0
-    </span>
-  </button>
- </div>
+
    
 </header>
 <!--<nav>
@@ -73,109 +66,124 @@
     </ul>
   </div>
 
-<!-- ✅ Refined Mobile Menu Overlay -->
-<div id="mobile-overlay" class="fixed top-16 right-4 w-[85vw] max-w-sm bg-white border border-gray-300 rounded-xl shadow-xl z-[9999] hidden flex flex-col px-6 py-5 space-y-4 text-base font-medium text-green-800 transition-all duration-300 ease-in-out">
+<!-- ✅ Sleek Mobile Menu -->
+<div id="mobile-overlay" class="fixed top-0 left-0 h-full w-3/4 sm:w-2/5 bg-white shadow-2xl z-[9999] hidden flex flex-col py-6 px-6 space-y-4 text-[17px] font-semibold text-green-700 border-r border-gray-200 transition-all duration-300 ease-in-out " >
+  <button onclick="toggleMenu()" class="absolute top-4 right-4 text-4xl text-red-600 font-bold leading-none">×</button>
 
   <a href="index.html" onclick="toggleMenu()" class="border-b pb-2">🏠 Home</a>
   <a href="all-products.html" onclick="toggleMenu()" class="border-b pb-2">All Categories</a>
   <a href="shivaaayaas_health_mix.html" onclick="toggleMenu()" class="border-b pb-2">Health Mix</a>
   <a href="shivaayaas-laddus.html" onclick="toggleMenu()" class="border-b pb-2">Laddus</a>
-  <a href="shivaayaas_poridge_mix.html" onclick="toggleMenu()" class="border-b pb-2">Poridge Mix</a>
+  <a href="shivaayaas_poridge_mix.html" onclick="toggleMenu()" class="border-b pb-2">Porridge Mix</a>
   <a href="deal-of-the-day.html" onclick="toggleMenu()" class="border-b pb-2">🎁 Grab the Offer</a>
   <a href="wellness.html" onclick="toggleMenu()" class="border-b pb-2">🌿 Healthy Living</a>
-  <a href="#contact-details" onclick="toggleMenu()" class="border-b pb-2">📞 Contact</a>
-
-  <button onclick="openFAQ(); toggleMenu()" class="w-full mt-2 bg-green-600 text-white py-2 rounded-lg shadow hover:bg-green-700 transition">
+  <a href="#contact-details" onclick="toggleMenu()" class="border-b pb-2">📞 Contact Us</a>
+  <button onclick="openFAQ(); toggleMenu()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700 transition">
     ❓ FAQ
   </button>
-
-  <button onclick="toggleMenu()" class="absolute top-2 right-3 text-2xl text-red-600 font-bold">×</button>
 </div>
 
 </nav>
 
 
 
-
 <!-- 🔥 Deal of the Day Highlight (Centered, Glowy) -->
 <section class="bg-gradient-to-r from-yellow-100 to-yellow-50 border-b border-yellow-300 shadow-inner py-3 px-6 text-center relative">
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-      <div class="flex items-center justify-center gap-2 glow-text">
-        <img id="deal-icon" src="./Images/deal-icon.png" alt="Deal Icon" class="w-7 h-7 glow-icon" />
-        <p class="text-lg sm:text-xl font-bold text-yellow-800">
-          🔥 Deal of the Day: Corn Laddu at ₹180 + Free Shipping!
-        </p>
-      </div>
-     
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+    <div class="flex items-center justify-center gap-2 glow-text">
+      <img id="deal-icon" src="./Images/deal-icon.png" alt="Deal Icon" class="w-7 h-7 glow-icon" />
+      <p class="text-lg sm:text-xl font-bold text-yellow-800">
+        🔥 Deal of the Day: Corn Laddu at ₹180 + Free Shipping!
+      </p>
     </div>
-    <a href="deal-of-the-day.html" class="bg-green-500 text-white font-semibold px-4 py-1.5 rounded-lg shadow hover:bg-yellow-600 transition duration-300 transform hover:scale-105 mt-3"
-    style="text-decoration: none; display: inline-block;">
-    Grab Now →
+   
+  </div>
+  <a href="deal-of-the-day.html" class="bg-green-500 text-white font-semibold px-4 py-1.5 rounded-lg shadow hover:bg-yellow-600 transition duration-300 transform hover:scale-105 mt-3"
+  style="text-decoration: none; display: inline-block;">
+  Grab Now →
+</a>
+</section>
+  
+<!--Floating Buttons Wrapper-->
+<div id="floating-icons" class="fixed top-12 right-20 z-50 cursor-move">
+  <!-- WhatsApp Button
+ <a href="https://wa.me/919715661550" target="_blank" class="block mb-3">
+   <img src="./Images/whatsapp.svg" alt="WhatsApp" class="w-12 h-12 rounded-full shadow-lg" />
  </a>
-  </section>
-  
-<div class="mb-8 flex justify-center">
-    <input
-      type="text"
-      placeholder="Search for a product..."
-      class="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
-    />
-  </div>
-  
-  <div class="slider-container">
-  <div class="slider" id="banner-slider">
-    <!-- JS will insert slides here -->
-  </div>
-  <button class="prev" onclick="prevSlide()">&#10094;</button>
-  <button class="next" onclick="nextSlide()">&#10095;</button>
-  <div class="dots" id="slider-dots"></div>
-</div>
-
-
-  <!--
-  
-  <div class="slider-container">
-	<div class="slider">
-		<div class="slide"><img src="./Images/Home_Banner/1.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/2.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/3.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/4.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/5.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/6.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/7.jpg" ></div>
-		<div class="slide"><img src="./Images/Home_Banner/8.jpg" ></div>
-	</div>
-	<button class="prev" onclick="prevSlide()">&#10094;</button>
-	<button class="next" onclick="nextSlide()">&#10095;</button>
-
-	<div class="dots">
-		<span class="dot" onclick="setSlide(0)"></span>
-		<span class="dot" onclick="setSlide(1)"></span>
-		<span class="dot" onclick="setSlide(2)"></span>
-		<span class="dot" onclick="setSlide(3)"></span>
-		<span class="dot" onclick="setSlide(4)"></span>
-	</div>
-</div>
 -->
-<section class="bg-yellow-50 border-y border-yellow-200 py-10 px-6 text-gray-800" style="background-image: url('path-to-your-texture.jpg'); background-size: cover; background-repeat: no-repeat;">
 
-<!--<section class="bg-yellow-50 border-y border-yellow-200 py-10 px-6 text-gray-800">-->
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">🌱 The Story of Shivaayaas</h2>
-    <ul class="space-y-4 text-left text-base leading-relaxed">
-		<li>💛 Started as a <span class="highlight">mother's dream</span> to promote traditional health through food.</li>
-		<li>🏠 Grew from a small neighborhood shop to serving <span class="highlight">10,000+ Happy Customers</span>.</li>
-		<li>🌾 Focused on reviving <em>Marabu Unavu</em> — Tamil Nadu’s ancient food wisdom.</li>
-		<li>👨‍👩‍👧‍👦 Our products are made with love, lab-tested, and <span class="highlight">100% natural.</span></li>
-		<li>⚖️ Blending ancient nutrition with modern lifestyle for every generation.</li>
-		<li>🌍 A mission-driven brand <span class="highlight">Empowering Families</span> with wellness and vitality.</li>
-		<li>🫶 You’re not just buying a product — you're becoming <span class="highlight">part of the Shivaayaas journey.</span></li>
+   <!-- Cart Button -->
+ <button id="cart-btn" class="relative w-12 h-12 rounded-full bg-pink-500 text-white shadow-lg animate-bounce">
+   🛒
+   <span id="cart-count" class="absolute -top-1 -right-1 bg-green-500 text-xs w-5 h-5 flex items-center justify-center rounded-full">
+     0
+   </span>
+ </button>
+</div>
 
-    </ul>
+<section class="bg-white py-16 px-4 sm:px-6 lg:px-20" id="all-products" >
+<h2 class="text-4xl font-bold mb-16 text-center text-green-800">Poridge Mix - traditional back to Home</h2>
+      
+  
+
+  <!-- 🧱 PRODUCT GRID CONTAINER -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+
+<!-- 🌟 Product 1: Karuppu Kavuni Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="201" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Karuppu Kavuni Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
   </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Kavuni Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹170</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">Rich in antioxidants and nutrients, this Poridge mix is perfect for boosting energy and improving overall health.</p>
+  <a href="product-detail.html?product=karuppukavunimix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+<!-- 🌟 Product 2: Mapillai Samba Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="202" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Mapillai Samba Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+  </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Mapillai Samba Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹90</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">A traditional mix known for its strength-enhancing properties, ideal for maintaining stamina and vitality.</p>
+  <a href="product-detail.html?product=mapillaisambamix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+<!-- 🌟 Product 3: Karuppu Ulundhu Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="203" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Karuppu Ulundhu Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+  </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Ulundhu Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹110</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">Packed with protein and essential nutrients, this mix is perfect for bone health and muscle strength.</p>
+  <a href="product-detail.html?product=karuppuulundhumix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+
+  
 </section>
 
 
+  
+</section>
 <!-- 🌟 Customer Reviews Section -->
 <section class="bg-yellow-50 py-10 px-4 text-center">
   <h2 class="text-2xl font-bold text-yellow-800 mb-6">🌟 What Our Customers Say</h2>
@@ -205,55 +213,117 @@
 </button>
 
 </section>
+<!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-[9999]">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl p-6 relative max-h-[80vh] overflow-y-auto">
 
+    <!-- Close Button -->
+    <button onclick="closeReviews()" class="absolute top-3 right-4 text-red-500 text-2xl font-bold">×</button>
 
-<section class="shop-by-categories py-12 bg-gray-50">
-  <h2 class="text-2xl md:text-3xl font-bold text-center text-green-700 mb-8">Shop by Categories</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
-	<!--
-    <div class="categories-container h-full">
-        <div class="category-card">
-           <a href="shivaaayaas_health_mix.html">
-            <img src="./Images/Healthmix.jpg" alt="Health Mix">
-            <p>Health Mix</p></a>
-        </div>
-		-->
-		 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-<a href="shivaaayaas_health_mix.html">       
-	   <img src="./Images/Healthmix34/Healthmix_category.png" alt="HealthMix 34 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-			 
-			 </a>
-      </div>
-	  <p class="text-center text-lg font-semibold text-gray-700 mt-2">Health Mix</p>
-	  </div>
-        
- <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-<a href="shivaayaas_poridge_mix.html">       
-	   <img src="./Images/Healthmix34/1.png" alt="HealthMix 34 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-			 
-			 </a>
-      </div>
-	  <p class="text-center text-lg font-semibold text-gray-700 mt-2">Poridge Mix</p>
-	  </div>		
-         <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-<a href="shivaayaas-laddus.html">       
-	   <img src="./Images/laddus/Laddu_Category.png" alt="HealthMix 34 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-			 
-			 </a>
-      </div>
-	  <p class="text-center text-lg font-semibold text-gray-700 mt-2">Millet Laddus</p>
-
-	  </div>
+    <h2 class="text-2xl font-bold mb-4 text-yellow-700 text-center">🌟 Customer Reviews</h2>
+  <!-- External Link -->
+    <div class="text-center mt-6">
+      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="text-sm text-blue-600 underline hover:text-blue-800">
+        🔗 View All Google Reviews
+      </a>
     </div>
-	</div>
+	<br>
+    <div class="space-y-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Amazing quality and authentic taste! Totally worth it."</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Kavitha S</p>
+      </div>
 
-</section>	
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Shivaayaas Health Mix is now part of our morning routine. Great energy!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Rajesh P</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"The best millet laddus in town. Healthy and tasty!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Anitha M</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Great customer support and super fast delivery. Keep it up!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Prakash K</p>
+      </div>
+    </div>
+
+ 
+  </div>
+</div>
+
+
+
+
+<!-- ❓ FAQ Modal Popup -->
+<div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white max-w-2xl w-full p-6 rounded-xl shadow-lg relative overflow-y-auto max-h-[80vh]">
+      <button onclick="closeFAQ()" class="absolute top-3 right-3 text-red-500 text-xl font-bold">×</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">❓ Frequently Asked Questions</h2>
+      
+      <div class="space-y-3 text-sm text-gray-700">
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">What makes Shivaayaas laddus healthy?</summary>
+          <p class="mt-2">Made from traditional millets, naturally sweetened, and 100% preservative free.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Are these suitable for kids?</summary>
+          <p class="mt-2">Yes! Ideal for children above 1 year old.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">How to place an order?</summary>
+          <p class="mt-2">You can order directly via WhatsApp from any product page.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Do you ship outside Tamil Nadu?</summary>
+          <p class="mt-2">Yes, we ship across India. Bulk orders welcome.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+   <script>
+    function openFAQ() {
+      document.getElementById("faq-modal").classList.remove("hidden");
+    }
+    function closeFAQ() {
+      document.getElementById("faq-modal").classList.add("hidden");
+    }
+  </script>
+
+
+<!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex justify-center items-center">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full shadow-lg relative">
+    <button onclick="closeReviews()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+    <h2 class="text-xl font-bold mb-4 text-center text-green-700">🌟 Happy Customers</h2>
+    
+    <div class="space-y-3 text-sm text-gray-700">
+      <p><strong>🛍️ Priya S:</strong> "Authentic taste, healthy and amazing quality!"</p>
+      <p><strong>🍯 Ram K:</strong> "Delicious laddus, super fast shipping."</p>
+      <p><strong>🌾 Devi M:</strong> "Energy levels boosted after using Shivaayaas health mix!"</p>
+      <p><strong>🥣 Karthik R:</strong> "Poridge mix was so tasty, pure ingredients."</p>
+      <p><strong>👩‍🦰 Meena V:</strong> "Reminded me of home-made traditional recipes. ❤️"</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full transition">
+        📖 See All Reviews on Google
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openReviews() {
+  document.getElementById("reviews-modal").classList.remove("hidden");
+}
+function closeReviews() {
+  document.getElementById("reviews-modal").classList.add("hidden");
+}
+</script>
+
 
 <!-- ❓ FAQ Modal Popup -->
 <div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
@@ -352,16 +422,6 @@
     </div>
 </section>
 
-<!-- Floating Buttons Wrapper -->
-<div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
-  
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919715661550" target="_blank" id="whatsapp-contact-btn"
-       class="bg-green-500 hover:bg-green-600 text-white p-8 rounded-full shadow-lg transition-transform hover:scale-105 transform duration-200 ease-in-out">
-      <img src="./Images/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" />
-    </a>  
-  </div>
-
 <!--<footer>
     <div class="footer-container">
         <div class="about-section">
@@ -409,83 +469,46 @@
  			
 </footer>-->
 
-<!-- 🌟 Customer Reviews Modal -->
-<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-[9999]">
-  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl p-6 relative max-h-[80vh] overflow-y-auto">
-
-    <!-- Close Button -->
-    <button onclick="closeReviews()" class="absolute top-3 right-4 text-red-500 text-2xl font-bold">×</button>
-
-    <h2 class="text-2xl font-bold mb-4 text-yellow-700 text-center">🌟 Customer Reviews</h2>
- <!-- External Link -->
-    <div class="text-center mt-6">
-      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="text-sm text-blue-600 underline hover:text-blue-800">
-        🔗 View All Google Reviews
-      </a>
-    </div>
-	<br>
-    <div class="space-y-4">
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
-        <p class="text-gray-800 italic">"Amazing quality and authentic taste! Totally worth it."</p>
-        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Kavitha S</p>
-      </div>
-
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
-        <p class="text-gray-800 italic">"Shivaayaas Health Mix is now part of our morning routine. Great energy!"</p>
-        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Rajesh P</p>
-      </div>
-
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
-        <p class="text-gray-800 italic">"The best millet laddus in town. Healthy and tasty!"</p>
-        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Anitha M</p>
-      </div>
-
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
-        <p class="text-gray-800 italic">"Great customer support and super fast delivery. Keep it up!"</p>
-        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Prakash K</p>
-      </div>
-    </div>
-
-  
-  </div>
-</div>
 
 
 
 <!-- 🛒 Cart Sidebar Modal -->
 <!-- ✅ Cart Modal -->
 <div id="cart-modal" class="fixed inset-0 z-[9999] flex items-start justify-end hidden backdrop-blur-sm">
-    <div id="cart-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
-  
-  
-   <!-- Sidebar -->
-   <div id="cart-sidebar" class="relative bg-white w-80 h-[calc(130vh-90px)] mt-[90px] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-[10000] rounded-l-xl">
-      <!-- Your cart content here -->
-      <!-- Add pt-6 to give breathing room -->
-      <div class="p-9 flex flex-col h-full">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-xl font-bold">🛍️ Your Cart</h2>
-          <button id="close-cart" class="text-red-600 text-2xl font-bold">×</button>
+  <div id="cart-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+ <!-- Sidebar -->
+ <div id="cart-sidebar" class="relative bg-white w-80 h-[calc(120vh-90px)] mt-[90px] shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto z-[10000] rounded-l-xl">
+    <!-- Your cart content here -->
+    <!-- Add pt-6 to give breathing room -->
+    <div class="p-9 flex flex-col h-full">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">🛍️ Your Cart</h2>
+        <button id="close-cart" class="text-red-600 text-2xl font-bold">×</button>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto space-y-3"></div>
+
+      <div class="mt-4 border-t pt-4">
+        <div class="flex justify-between text-lg font-semibold mb-3">
+          <span>Total:</span>
+          <span>₹<span id="cart-total">0</span></span>
         </div>
-        <div id="cart-items" class="flex-1 overflow-y-auto space-y-3"></div>
-  
-        <div class="mt-4 border-t pt-4">
-          <div class="flex justify-between text-lg font-semibold mb-3">
-            <span>Total:</span>
-            <span>₹<span id="cart-total">0</span></span>
-          </div>
-          <a id="whatsapp-checkout" href="#" target="_blank"
-             class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
-            Checkout via WhatsApp
-          </a>
-		  <button id="clear-cart" class="w-full text-center bg-red-100 hover:bg-red-200 text-red-700 py-2 rounded-lg">🧹 Clear Cart</button>
-          <!--<button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button>-->
-        </div>
+        <a id="whatsapp-checkout" href="#" target="_blank"
+           class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
+          Checkout via WhatsApp
+        </a>
+		<button id="clear-cart" class="w-full text-center bg-red-100 hover:bg-red-200 text-red-700 py-2 rounded-lg">🧹 Clear Cart</button>
+        <!--<button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button> -->
       </div>
     </div>
   </div>
+</div>
+
+<script src="./Javascript/all-products.js"></script>
 <script src="./Javascript/home.js"></script>
 <script src="./Javascript/cart.js"></script>
+
 <script>
     document.addEventListener("keydown", function (e) {
       if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
@@ -502,16 +525,6 @@
 
   document.getElementById("menu-btn")?.addEventListener("click", toggleMenu);
 </script>
-<script>
-  function openReviews() {
-    document.getElementById("reviews-modal").classList.remove("hidden");
-  }
-
-  function closeReviews() {
-    document.getElementById("reviews-modal").classList.add("hidden");
-  }
-</script>
-
 
 
 </body>

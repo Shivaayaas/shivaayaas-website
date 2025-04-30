@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healthy Living | Shivaayaas</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-green-50 text-gray-800">
+<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+<link href="./dist/output.css" rel="stylesheet">
 
 <!-- ✅ Sticky Header -->
 <header class="sticky top-0 bg-white shadow z-50 p-4 flex justify-between items-center">
@@ -60,9 +63,53 @@ Grab Now →
 <section class="bg-white py-10 px-4 text-center">
   <h2 class="text-2xl font-bold text-green-700 mb-6">Watch Our Natural Food Insights 🍀</h2>
   <div class="flex justify-center">
-    <iframe width="320" height="180" class="rounded-xl shadow" src="https://www.youtube.com/embed/8dH7Z4reWqE" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gi5T-JUq6uQ?si=y3PGS-HjS1VRnA1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	
   </div>
 </section>
+<!-- 🌟 Carousel Reviews Section -->
+<section class="bg-white py-10 px-4">
+  <h2 class="text-2xl font-bold text-center text-green-700 mb-6">❤️ Loved by Families Across Tamil Nadu</h2>
+  <div class="swiper myReviewSwiper max-w-4xl mx-auto">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide p-6 bg-green-50 rounded-xl shadow text-center">
+        <p class="italic text-gray-700">"Shivaayaas laddus are not just healthy, they're delicious too!"</p>
+        <p class="mt-2 text-green-800 font-semibold">– Sneha V</p>
+      </div>
+
+      <div class="swiper-slide p-6 bg-green-50 rounded-xl shadow text-center">
+        <p class="italic text-gray-700">"Truly traditional flavors. Reminds me of my grandma's kitchen."</p>
+        <p class="mt-2 text-green-800 font-semibold">– Murali P</p>
+      </div>
+
+    </div>
+    <div class="swiper-pagination mt-4 center"></div>
+    <div class="swiper-pagination mt-4 center"></div>
+  </div>
+</section>
+<div class="text-center mt-6">
+<button onclick="openReviews()"
+  class="bg-yellow-400 text-white text-center font-bold py-2 px-6 rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 animate-pulse hover:scale-105">
+     View All Reviews
+</button>
+</div>
+
+ 
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init Script -->
+<script>
+  new Swiper('.myReviewSwiper', {
+    loop: true,
+    autoplay: { delay: 4000 },
+    pagination: { el: '.swiper-pagination' },
+  });
+</script>
+
 
 <!-- 📝 Blog Section -->
 <section class="max-w-6xl mx-auto py-10 px-4">
@@ -90,9 +137,79 @@ Grab Now →
 </section>
 
 <!-- 🔚 Footer -->
-<footer class="text-center text-sm text-gray-600 py-4 mt-8">
-  &copy; 2025 Shivaayaas. All rights reserved.
-</footer>
+<div class="contact-info">
+            <h3>Follow us on:</h3>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/facebook-icon.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/instagram-icon.png" alt="Instagram"></a>
+              <a href="https://wa.me/919715661550"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
+          </div>
+            <p><strong>Call us:</strong> +91-9600254264</p>
+            <p><strong>Email us:</strong> shivaayaasfoodproducts@gmail.com</p>
+        </div>
+<!-- 🧾 Footer Bottom -->
+	 
+	  <div class="flex flex-col items-center space-y-2 mb-4">
+    <p class="text-gray-700 font-semibold">FSSAI License No: <span class="text-green-700 font-bold">22423431000209</span></p>
+    <p class="text-gray-700 font-semibold">GST No: <span class="text-green-700 font-bold">33MWVPS5505F1ZW</span></p>
+  </div>
+   <div class="flex flex-col items-center space-y-2 mb-4">
+    <p>&copy; 2024 Shivaayaas Food Products. All Rights Reserved.</p>
+   <p>Designed with ❤️ by 
+    <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+       target="_blank" class="text-green-700 hover:underline font-semibold">
+       Sundarpandi Pandiaraj
+    </a>
+  </p>
+  </div>
+  
+  <!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-[9999]">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl p-6 relative max-h-[80vh] overflow-y-auto">
+
+    <!-- Close Button -->
+    <button onclick="closeReviews()" class="absolute top-3 right-4 text-red-500 text-2xl font-bold">×</button>
+
+    <h2 class="text-2xl font-bold mb-4 text-yellow-700 text-center">🌟 Customer Reviews</h2>
+  <!-- External Link -->
+    <div class="text-center mt-6">
+      <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="text-sm text-blue-600 underline hover:text-blue-800">
+        🔗 View All Google Reviews
+      </a>
+    </div>
+	<br>
+    <div class="space-y-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Amazing quality and authentic taste! Totally worth it."</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Kavitha S</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Shivaayaas Health Mix is now part of our morning routine. Great energy!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Rajesh P</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"The best millet laddus in town. Healthy and tasty!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Anitha M</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Great customer support and super fast delivery. Keep it up!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Prakash K</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function openReviews() {
+    document.getElementById("reviews-modal").classList.remove("hidden");
+  }
+
+  function closeReviews() {
+    document.getElementById("reviews-modal").classList.add("hidden");
+  }
+</script>
 
 </body>
 </html>

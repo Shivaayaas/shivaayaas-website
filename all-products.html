@@ -1,51 +1,88 @@
 <!Doctype html>
 <html>
 <head> 
-
 <title> Shivayaas Food Products </title>
 <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body>
-<!--Header Style-->
-<link rel="stylesheet" type="text/css" href="./CSS/style.css">
-<link href="./dist/output.css" rel="stylesheet">
+<header id="main-header">
+<center>
+<!--Image-->
+<img id="logo" src="./Images/logo.png" alt="Shivaayaas logo">
 <script src="https://cdn.tailwindcss.com"></script>
-<!-- SwiperJS for Image Slider -->
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<body class="bg-gray-50 text-gray-800">
+<!--<img id="logo" src="Images/logo.png" alt="Shivaayaas logo" width="200" height="100" style="float:left; margin:0 30px 0 0;">-->
+<!--<img src="Images/bname_txt.png" alt="Shivaayaas logo" width="300" height="100" style="float:left; margin:0 0 0 5px;">-->
+<div>
+	<h1 id="brand-name">SHIVAAYAAS FOOD PRODUCTS<span class="copyright">®</span></h1> <br>
+	<h2 id="slogan">PURE AND SWEET, A HEALTHY TREAT</h2>
+</div></center>
 
-  <!-- ✅ Sticky Header -->
-<header id="main-header" class="sticky top-0 z-50 bg-white shadow">
-  <!-- Shivaayaas Logo + Brand Name -->
-  <img id="logo" src="./Images/logo.png" alt="Shivaayaas logo" class="h-14 w-auto ml-4 mt-2" />
-  <div class="flex flex-col justify-center ml-3">
-    <h1 class="text-lg sm:text-xl font-bold text-green-500 leading-tight">
-      SHIVAAYAAS FOOD PRODUCTS<span class="text-sm align-super">®</span>
-    </h1>
-    <h2 class="text-sm sm:text-base text-green-50 leading-tight -mt-1">
-      PURE AND SWEET, A HEALTHY TREAT
-    </h2>
-  </div>
+
+   
 </header>
-<nav>
-  <ul>
+<!--<nav>
+    <ul>
+        <li><a href="./all-products.html">Explore Shivaayaas</a></li>
+        <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
+        <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
+        <li><a href="wellness.html">
+            🌿 Visit Healthy Living
+          </a></li>
+        <li><a href="#contact-details">📞Contact Us</a></li>
+        <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
+            ❓ FAQ
+          </button>
+    </ul>
+</nav>-->
+
+<nav class="bg-white shadow-md px-4 py-3 relative z-50">
+  <div class="flex justify-between items-center max-w-6xl mx-auto">
+    <a href="index.html" class="text-lg font-bold text-green-700">Menu ➡</a>
+
     
-      <li><a href="index.html">Home🏠</a></li>
-    <li><a href="./all-products.html">Explore Shivaayaas</a></li>
-      <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
-      <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
-      <li><a href="wellness.html">
-          🌿 Visit Healthy Living
-        </a></li>
-      <li><a href="#contact-details">📞Contact Us</a></li>
-      <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
-          ❓ FAQ
-        </button>
-  </ul>
+ <!-- 🔽 Hamburger for Mobile -->
+<button id="menu-btn" class="sm:hidden text-3xl px-2 py-1 focus:outline-none text-green-700 border border-green-200 rounded-md shadow">
+  ☰
+</button>
+
+
+    <!-- ✅ Desktop Navigation -->
+    <ul id="nav-links" class="hidden sm:flex space-x-10 text-sm text-gray-700 font-semibold">
+        <li><a href="./all-products.html">Explore Shivaayaas</a></li>
+        <li><a href="shivaaayaas_health_mix.html">Shivaayaas Health Mix</a></li>
+        <li><a href="shivaayaas-laddus.html">Shivaayaas Laddus</a></li>
+		<li><a href="shivaayaas_poridge_mix.html">Shivaayaas Poridge Mix</a></li>
+        <li><a href="wellness.html">
+            🌿 Visit Healthy Living
+          </a></li>
+        <li><a href="#contact-details">📞Contact Us</a></li>
+        <button onclick="openFAQ()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-4 rounded-lg shadow">
+            ❓ FAQ
+          </button>
+    </ul>
+  </div>
+
+<!-- ✅ Sleek Mobile Menu -->
+<div id="mobile-overlay" class="fixed top-0 left-0 h-full w-3/4 sm:w-2/5 bg-white shadow-2xl z-[9999] hidden flex flex-col py-6 px-6 space-y-4 text-[17px] font-semibold text-green-700 border-r border-gray-200 transition-all duration-300 ease-in-out " >
+  <button onclick="toggleMenu()" class="absolute top-4 right-4 text-4xl text-red-600 font-bold leading-none">×</button>
+
+  <a href="index.html" onclick="toggleMenu()" class="border-b pb-2">🏠 Home</a>
+  <a href="all-products.html" onclick="toggleMenu()" class="border-b pb-2">All Categories</a>
+  <a href="shivaaayaas_health_mix.html" onclick="toggleMenu()" class="border-b pb-2">Health Mix</a>
+  <a href="shivaayaas-laddus.html" onclick="toggleMenu()" class="border-b pb-2">Laddus</a>
+  <a href="shivaayaas_poridge_mix.html" onclick="toggleMenu()" class="border-b pb-2">Porridge Mix</a>
+  <a href="deal-of-the-day.html" onclick="toggleMenu()" class="border-b pb-2">🎁 Grab the Offer</a>
+  <a href="wellness.html" onclick="toggleMenu()" class="border-b pb-2">🌿 Healthy Living</a>
+  <a href="#contact-details" onclick="toggleMenu()" class="border-b pb-2">📞 Contact Us</a>
+  <button onclick="openFAQ(); toggleMenu()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700 transition">
+    ❓ FAQ
+  </button>
+</div>
+
 </nav>
 
 
@@ -84,148 +121,148 @@
  </button>
 </div>
 
-
 <section class="bg-white py-16 px-4 sm:px-6 lg:px-20" id="all-products" >
-    <h2 class="text-4xl font-bold mb-16 text-center text-green-800">All Products - A Taste of Tradition</h2>
-    <div class="flex flex-wrap justify-center gap-2 bg-green-50 p-3 rounded-xl shadow-sm border border-green-100">
-        
-      <div class="flex flex-wrap gap-3 mb-6 justify-center">
-        <button class="category-btn px-4 py-2 rounded-full bg-green-600 text-white font-medium shadow-md hover:shadow-lg transition" data-filter="all">All</button>
-        <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-green-100 transition" data-filter="healthmix">Health Mix</button>
-        <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-green-100 transition" data-filter="laddu">Laddu</button>
-      </div>
-      <!-- buttons here -->
+  <h2 class="text-4xl font-bold mb-16 text-center text-green-800">All Products - A Taste of Tradition</h2>
+  <div class="flex flex-wrap justify-center gap-2 bg-green-50 p-3 rounded-xl shadow-sm border border-green-100">
+      
+    <div class="flex flex-wrap gap-3 mb-6 justify-center">
+      <button class="category-btn px-4 py-2 rounded-full bg-green-600 text-white font-medium shadow-md hover:shadow-lg transition" data-filter="all">All</button>
+      <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-green-100 transition" data-filter="healthmix">Health Mix</button>
+      <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-green-100 transition" data-filter="laddu">Laddu</button>
+   <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-green-100 transition" data-filter="poridgemix">Poridge Mix</button>
     </div>
-      
-      
+    <!-- buttons here -->
+  </div>
+    
+    
 
-    <!-- 🧱 PRODUCT GRID CONTAINER -->
+  <!-- 🧱 PRODUCT GRID CONTAINER -->
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
 
 <!-- 🌟 Product 1: HealthMix 34 Ingredients -->
-    <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-        <img src="./Images/Healthmix34/1.png" alt="HealthMix 34 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-      </div>
-      <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 34 Ingredients</h3>
-      <p class="text-green-700 font-semibold mb-1">₹240</p>
-      <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
-      <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain porridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages.</p>
-      <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-              data-name="HealthMix 34 Ingredients"
-              data-price="240">Add to Cart</button> -->
-             <!-- <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-              data-id="101"
-              data-name="HealthMix 34 Ingredients"
-              data-price="240"
-              data-description="100% natural multigrain porridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages."
-              data-image="./Images/Healthmix.jpg"
-              data-weight="250g"
-              data-tags="Organic, Gelatine Free"
-              data-benefits="Boosts Immunity,Made with 34 traditional ingredients,Perfect for all age groups"
-      >View Product</button>-->
-      <a href="product-detail.html?product=healthmix34"
-      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
-      View Product
-   </a>
-       
+  <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="healthmix"  id="product-info">
+    <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+      <img src="./Images/Healthmix34/1.png" alt="HealthMix 34 Ingredients"
+           class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
     </div>
-  
-    <!-- 🌟 Product 2: HealthMix 15 Ingredients -->
-    <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="102" data-category="healthmix">
-      <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-        <img src="./Images/Healthmix.jpg" alt="HealthMix 15 Ingredients"
-             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-      </div>
-      <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 15 Ingredients</h3>
-      <p class="text-green-700 font-semibold mb-1">₹170</p>
-      <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
-      <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain porridge for everyday nutrition. Ideal for all age groups with immunity-boosting benefits.</p>
-    <!-- Health Mix 15 -->
+    <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 34 Ingredients</h3>
+    <p class="text-green-700 font-semibold mb-1">₹240</p>
+    <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
+    <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain Poridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages.</p>
+    <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+            data-name="HealthMix 34 Ingredients"
+            data-price="240">Add to Cart</button> -->
+           <!-- <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+            data-id="101"
+            data-name="HealthMix 34 Ingredients"
+            data-price="240"
+            data-description="100% natural multigrain Poridge with a balance of strength, energy and immunity-building nutrients. Suitable for all ages."
+            data-image="./Images/Healthmix.jpg"
+            data-weight="250g"
+            data-tags="Organic, Gelatine Free"
+            data-benefits="Boosts Immunity,Made with 34 traditional ingredients,Perfect for all age groups"
+    >View Product</button>-->
+    <a href="product-detail.html?product=healthmix34"
+    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+ </a>
+     
+  </div>
+
+  <!-- 🌟 Product 2: HealthMix 15 Ingredients -->
+  <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="102" data-category="healthmix">
+    <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+      <img src="./Images/Healthmix.jpg" alt="HealthMix 15 Ingredients"
+           class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+    </div>
+    <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">HealthMix 15 Ingredients</h3>
+    <p class="text-green-700 font-semibold mb-1">₹170</p>
+    <p class="text-sm text-gray-500 mb-2">250g • Organic • Gelatine Free</p>
+    <p class="text-sm text-gray-600 mb-4 flex-grow">100% natural multigrain Poridge for everyday nutrition. Ideal for all age groups with immunity-boosting benefits.</p>
+  <!-- Health Mix 15 -->
 <a href="product-detail.html?product=healthmix15"
 class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
 View Product
 </a>
-    </div>
-  
-  
-  <!-- 🌟 Product 1: Karuppu Kavuni Arisi Laddu -->
-<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Karuppu Kavuni Arisi/Karuppu Kavuni Arisi laddu.jpg" alt="Karuppu Kavuni Arisi Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
   </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Kavuni Arisi Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹300</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Organic • Gelatine Free</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">A royal recipe made with antioxidant-rich black rice, ideal for immunity and stamina.</p>
- <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Karuppu Kavuni Arisi Laddu"
-          data-price="300">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          onclick="location.href='product-detail-karuppu-kavuni.html'">
-    View Product
-  </button>-->
-  <a href="product-detail.html?product=karuppu-kavuni"
-   class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
-   View Product
+
+
+<!-- 🌟 Product 1: Karuppu Kavuni Arisi Laddu -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="101" data-category="laddu">
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Karuppu Kavuni Arisi/1.jpg" alt="Karuppu Kavuni Arisi Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Kavuni Arisi Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹300</p>
+<p class="text-sm text-gray-500 mb-2">300g • Organic • Gelatine Free</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">A royal recipe made with antioxidant-rich black rice, ideal for immunity and stamina.</p>
+<!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Karuppu Kavuni Arisi Laddu"
+        data-price="300">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        onclick="location.href='product-detail-karuppu-kavuni.html'">
+  View Product
+</button>-->
+<a href="product-detail.html?product=karuppu-kavuni"
+ class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+ View Product
 </a>
 <!--
-  <div class="mt-auto flex justify-center">
-    <a href="product-detail-karuppu-kavuni.html"
-       class="view-details-btn bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 px-4 rounded-lg transition"
-       data-name="Karuppu Kavuni Arisi Laddu"
-       data-price="PRICE : ₹300"
-       data-description="Karuppu kavuni arisi laddu made from black rice with high antioxidants and fiber."
-       data-benefits="Rich in Iron, Improves Digestion, Antioxidant Boost"
-       data-images="./Images/laddus/Karuppu Kavuni Arisi/1.jpg,./Images/laddus/Karuppu Kavuni Arisi/2.jpg">
-      View Product
-    </a>
-  </div> -->
+<div class="mt-auto flex justify-center">
+  <a href="product-detail-karuppu-kavuni.html"
+     class="view-details-btn bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 px-4 rounded-lg transition"
+     data-name="Karuppu Kavuni Arisi Laddu"
+     data-price="PRICE : ₹300"
+     data-description="Karuppu kavuni arisi laddu made from black rice with high antioxidants and fiber."
+     data-benefits="Rich in Iron, Improves Digestion, Antioxidant Boost"
+     data-images="./Images/laddus/Karuppu Kavuni Arisi/1.jpg,./Images/laddus/Karuppu Kavuni Arisi/2.jpg">
+    View Product
+  </a>
+</div> -->
 </div>
 
 <!-- 🌟 Product 2: Ragi Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="102" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Ragi/comingsoon.webp" alt="Ragi Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Ragi Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹280</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Iron-Rich • Bone Strength</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Made with finger millet, this laddu supports bone health and boosts energy.</p>
- <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Ragi Laddu"
-          data-price="280">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-thinai.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Ragi/1.webp" alt="Ragi Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Ragi Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹280</p>
+<p class="text-sm text-gray-500 mb-2">300g • Iron-Rich • Bone Strength</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Made with finger millet, this laddu supports bone health and boosts energy.</p>
+<!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Ragi Laddu"
+        data-price="280">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-thinai.html'">
+View Product
 </button>-->
 
-  <a href="product-detail.html?product=ragi"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
-  View Product
+<a href="product-detail.html?product=ragi"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+View Product
 </a>
 
 </div>
 
 <!-- 🌟 Product 3: Kambu Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="103" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Kambu/1.jpg" alt="Kambu Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Kambu Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹270</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Cooling Effect • Fibre-Rich</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Pearl millet laddu with cooling properties, perfect for digestion and summer heat.</p>
-  <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Kambu Laddu"
-          data-price="270">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-kambu.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Kambu/1.jpg" alt="Kambu Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Kambu Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹270</p>
+<p class="text-sm text-gray-500 mb-2">300g • Cooling Effect • Fibre-Rich</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Pearl millet laddu with cooling properties, perfect for digestion and summer heat.</p>
+<!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Kambu Laddu"
+        data-price="270">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-kambu.html'">
+View Product
 </button>-->
 <a href="product-detail.html?product=kambu"
 class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
@@ -236,125 +273,125 @@ View Product
 
 <!-- 🌟 Product 4: Thinai Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="104" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Thinai/1.jpg" alt="Thinai Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Thinai Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹260</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Fibre-Rich • Heart Healthy</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Foxtail millet laddu that supports heart health and digestion with high fiber content.</p>
- <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Thinai Laddu"
-          data-price="260">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-thinai.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Thinai/1.jpg" alt="Thinai Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Thinai Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹260</p>
+<p class="text-sm text-gray-500 mb-2">300g • Fibre-Rich • Heart Healthy</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Foxtail millet laddu that supports heart health and digestion with high fiber content.</p>
+<!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Thinai Laddu"
+        data-price="260">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-thinai.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=thinai"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=thinai"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 </div>
 
 <!-- 🌟 Product 5: Maappillai Samba Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="105" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Mapillai Samba/comingsoon.webp" alt="Maappillai Samba Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Maappillai Samba Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹290</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Energy Boost • Traditional Grain</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Rich in iron and stamina-building nutrients, this laddu is perfect for everyday strength.</p>
- <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Maappillai Samba Laddu"
-          data-price="290">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-mappillai-samba.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Mapillai Samba/1.jpg" alt="Maappillai Samba Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Maappillai Samba Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹290</p>
+<p class="text-sm text-gray-500 mb-2">300g • Energy Boost • Traditional Grain</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Rich in iron and stamina-building nutrients, this laddu is perfect for everyday strength.</p>
+<!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Maappillai Samba Laddu"
+        data-price="290">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-mappillai-samba.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=mapillai-samba"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=mapillai-samba"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 </div>
 
 <!-- 🌟 Product 6: Corn Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="106" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Corn/1.avif" alt="Corn Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Corn Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹250</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Protein-Rich • Gluten-Free</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">A tasty laddu made from sweet corn flour, great for energy and digestion.</p>
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Corn/1.jpg" alt="Corn Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Corn Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹250</p>
+<p class="text-sm text-gray-500 mb-2">300g • Protein-Rich • Gluten-Free</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">A tasty laddu made from sweet corn flour, great for energy and digestion.</p>
 <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Corn Laddu"
-          data-price="250">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-corn.html'">
-  View Product
+        data-name="Corn Laddu"
+        data-price="250">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-corn.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=corn"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=corn"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 </div>
 
 <!-- 🌟 Product 7: Sigappu Avul Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="107" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Sigappu Avul/1.jpg" alt="Sigappu Avul Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Sigappu Avul Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹240</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Iron-Rich • Digestive Boost</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Made from red flattened rice, this nutritious laddu helps improve digestion and energy.</p>
-  <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Sigappu Avul Laddu"
-          data-price="240">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-sigappu-avul.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Sigappu Avul/1.jpg" alt="Sigappu Avul Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Sigappu Avul Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹240</p>
+<p class="text-sm text-gray-500 mb-2">300g • Iron-Rich • Digestive Boost</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Made from red flattened rice, this nutritious laddu helps improve digestion and energy.</p>
+<!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Sigappu Avul Laddu"
+        data-price="240">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-sigappu-avul.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=sigappu-avul"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=sigappu-avul"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 </div>
 
 <!-- 🌟 Product 8: Karuppu Ulunthu Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="108" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Karuppu Ulunthu/1.jpg" alt="Karuppu Ulunthu Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Ulunthu Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹260</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Bone Strength • Protein Boost</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Black urad dal laddu, ideal for women and children to strengthen bones and muscles.</p>
- <!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Karuppu Ulunthu Laddu"
-          data-price="260">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-karuppu-ulunthu.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Karuppu Ulunthu/1.jpg" alt="Karuppu Ulunthu Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Ulunthu Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹260</p>
+<p class="text-sm text-gray-500 mb-2">300g • Bone Strength • Protein Boost</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Black urad dal laddu, ideal for women and children to strengthen bones and muscles.</p>
+<!-- <button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Karuppu Ulunthu Laddu"
+        data-price="260">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-karuppu-ulunthu.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=karuppu-ulunthu"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=karuppu-ulunthu"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 
@@ -362,25 +399,25 @@ View Product
 
 <!-- 🌟 Product 9: Ellu Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="109" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Ellu/comingsoon.webp" alt="Ellu Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Ellu Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹230</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Calcium-Rich • Cholesterol-Free</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Made from sesame seeds and jaggery, this laddu supports bone health and skin glow.</p>
-  <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Ellu Laddu"
-          data-price="230">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-ellu.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Ellu/1.webp" alt="Ellu Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Ellu Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹230</p>
+<p class="text-sm text-gray-500 mb-2">300g • Calcium-Rich • Cholesterol-Free</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Made from sesame seeds and jaggery, this laddu supports bone health and skin glow.</p>
+<!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Ellu Laddu"
+        data-price="230">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-ellu.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=ellu"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=ellu"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 
@@ -388,36 +425,209 @@ View Product
 
 <!-- 🌟 Product 10: Pachai Payaru Laddu -->
 <div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="110" data-category="laddu">
-  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
-    <img src="./Images/laddus/Pachai Payaru/1.jpg" alt="Pachai Payaru Laddu"
-         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
-  </div>
-  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Pachai Payaru Laddu</h3>
-  <p class="text-green-700 font-semibold mb-1">₹240</p>
-  <p class="text-sm text-gray-500 mb-2">300g • Detox • Fiber & Protein</p>
-  <p class="text-sm text-gray-600 mb-4 flex-grow">Green gram laddu that helps in detox, digestion, and muscle recovery.</p>
-  <!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-          data-name="Pachai Payaru Laddu"
-          data-price="240">Add to Cart</button>
-          <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
-        onclick="location.href='product-detail-pachai-payaru.html'">
-  View Product
+<div class="overflow-hidden rounded-xl mb-4 aspect-square">
+  <img src="./Images/laddus/Pachai Payaru/1.jpg" alt="Pachai Payaru Laddu"
+       class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+</div>
+<h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Pachai Payaru Laddu</h3>
+<p class="text-green-700 font-semibold mb-1">₹240</p>
+<p class="text-sm text-gray-500 mb-2">300g • Detox • Fiber & Protein</p>
+<p class="text-sm text-gray-600 mb-4 flex-grow">Green gram laddu that helps in detox, digestion, and muscle recovery.</p>
+<!--<button class="add-to-cart-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+        data-name="Pachai Payaru Laddu"
+        data-price="240">Add to Cart</button>
+        <button class="view-details-btn mt-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg transition"
+      onclick="location.href='product-detail-pachai-payaru.html'">
+View Product
 </button>-->
 <div class="mt-auto flex justify-center">
-  <a href="product-detail.html?product=pachai-payiru"
-  class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-  View Product
+<a href="product-detail.html?product=pachai-payiru"
+class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+View Product
 </a>
 </div>
 
 </div>
 
 
+<!-- 🌟 Product 1: Karuppu Kavuni Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="201" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Karuppu Kavuni Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
   </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Kavuni Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹170</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">Rich in antioxidants and nutrients, this Poridge mix is perfect for boosting energy and improving overall health.</p>
+  <a href="product-detail.html?product=karuppukavunimix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+<!-- 🌟 Product 2: Mapillai Samba Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="202" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Mapillai Samba Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+  </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Mapillai Samba Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹90</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">A traditional mix known for its strength-enhancing properties, ideal for maintaining stamina and vitality.</p>
+  <a href="product-detail.html?product=mapillaisambamix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+<!-- 🌟 Product 3: Karuppu Ulundhu Mix -->
+<div class="product-card bg-white rounded-2xl shadow-md hover:shadow-xl transition-all border border-gray-200 p-4 flex flex-col h-full" data-id="203" data-category="poridgemix">
+  <div class="overflow-hidden rounded-xl mb-4 aspect-square">
+    <img src="./Images/poridge/1.jpg" alt="Karuppu Ulundhu Mix"
+         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+  </div>
+  <h3 class="text-base font-semibold text-gray-800 mb-1 break-words">Karuppu Ulundhu Mix</h3>
+  <p class="text-green-700 font-semibold mb-1">₹110</p>
+  <p class="text-sm text-gray-500 mb-2">250g • Organic • Gluten Free</p>
+  <p class="text-sm text-gray-600 mb-4 flex-grow">Packed with protein and essential nutrients, this mix is perfect for bone health and muscle strength.</p>
+  <a href="product-detail.html?product=karuppuulundhumix"
+     class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition text-center">
+    View Product
+  </a>
+</div>
+
+
+</div>
+
+
   
+</section>
+
+
   
-    
-  </section>
+</section>
+<!-- 🌟 Customer Reviews Section -->
+<section class="bg-yellow-50 py-10 px-4 text-center">
+  <h2 class="text-2xl font-bold text-yellow-800 mb-6">🌟 What Our Customers Say</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <!-- Testimonial Card -->
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Authentic taste with traditional values. My kids love the Ragi laddu!"</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Aishwarya R, Chennai</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Health mix is part of our daily breakfast now. Highly recommended!"</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Vignesh K, Hosur</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow border border-yellow-200">
+      <p class="text-gray-700 italic">"Fast shipping, secure packaging, and amazing customer support."</p>
+      <p class="mt-3 text-sm text-yellow-800 font-semibold">– Revathi M, Coimbatore</p>
+    </div>
+
+  </div>
+  <br>
+<button onclick="openReviews()"
+  class="bg-yellow-400 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 animate-pulse hover:scale-105">
+  Click Here to See More Reviews
+</button>
+
+</section>
+<!-- 🌟 Customer Reviews Modal -->
+<div id="reviews-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-[9999]">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl p-6 relative max-h-[80vh] overflow-y-auto">
+
+    <!-- Close Button -->
+    <button onclick="closeReviews()" class="absolute top-3 right-4 text-red-500 text-2xl font-bold">×</button>
+
+    <h2 class="text-2xl font-bold mb-4 text-yellow-700 text-center">🌟 Customer Reviews</h2>
+ <!-- External Link -->
+ <div class="text-center mt-6">
+  <a href="https://g.co/kgs/nATHRPQ" target="_blank" class="text-sm text-blue-600 underline hover:text-blue-800">
+    🔗 View All Google Reviews
+  </a>
+</div>
+<br>
+    <div class="space-y-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Amazing quality and authentic taste! Totally worth it."</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Kavitha S</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Shivaayaas Health Mix is now part of our morning routine. Great energy!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Rajesh P</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"The best millet laddus in town. Healthy and tasty!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Anitha M</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow-sm rounded">
+        <p class="text-gray-800 italic">"Great customer support and super fast delivery. Keep it up!"</p>
+        <p class="mt-2 text-sm text-yellow-800 font-semibold">– Prakash K</p>
+      </div>
+    </div>
+
+   
+  </div>
+</div>
+<script>
+  function openReviews() {
+    document.getElementById("reviews-modal").classList.remove("hidden");
+  }
+
+  function closeReviews() {
+    document.getElementById("reviews-modal").classList.add("hidden");
+  }
+</script>
+
+
+
+
+
+<!-- ❓ FAQ Modal Popup -->
+<div id="faq-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white max-w-2xl w-full p-6 rounded-xl shadow-lg relative overflow-y-auto max-h-[80vh]">
+      <button onclick="closeFAQ()" class="absolute top-3 right-3 text-red-500 text-xl font-bold">×</button>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">❓ Frequently Asked Questions</h2>
+      
+      <div class="space-y-3 text-sm text-gray-700">
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">What makes Shivaayaas laddus healthy?</summary>
+          <p class="mt-2">Made from traditional millets, naturally sweetened, and 100% preservative free.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Are these suitable for kids?</summary>
+          <p class="mt-2">Yes! Ideal for children above 1 year old.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">How to place an order?</summary>
+          <p class="mt-2">You can order directly via WhatsApp from any product page.</p>
+        </details>
+        <details class="bg-gray-50 p-3 rounded-lg border">
+          <summary class="font-semibold cursor-pointer">Do you ship outside Tamil Nadu?</summary>
+          <p class="mt-2">Yes, we ship across India. Bulk orders welcome.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+   <script>
+    function openFAQ() {
+      document.getElementById("faq-modal").classList.remove("hidden");
+    }
+    function closeFAQ() {
+      document.getElementById("faq-modal").classList.add("hidden");
+    }
+  </script>
+
+
+
 
 
 <!-- ❓ FAQ Modal Popup -->
@@ -458,7 +668,7 @@ View Product
 <!-- Footer Information -->
 
 <section id="contact-details" class="bg-white text-center py-10 px-4 border-t border-green-200">
-  <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <h2>👉 "Shivaayaas Food Products – Pure Goodness, Naturally!" 👈</h2>
         <p>
             💛 "Shivaayaas began as a small dream, built on trust and belief. 
@@ -490,22 +700,83 @@ View Product
 
         <div class="contact-info">
             <h3>Follow us on:</h3>
-             <div class="social-icons">
+            <div class="social-icons">
                 <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/facebook-icon.png" alt="Facebook"></a>
                 <a href="https://www.instagram.com/shivaayaasfoodproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./Images/instagram-icon.png" alt="Instagram"></a>
-                <a href="https://wa.me/919715661550"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
+                <a href="https://wa.me/919715661550" id="whatsapp-contact-btn"><img src="./Images/whatsapp-icon.webp" alt="WhatsApp"></a>
             </div>
             <p><strong>Call us:</strong> +91-9600254264</p>
             <p><strong>Email us:</strong> shivaayaasfoodproducts@gmail.com</p>
         </div>
     </div>
 	 <!-- 🧾 Footer Bottom -->
+	 
+	  <div class="flex flex-col items-center space-y-2 mb-4">
+    <p class="text-gray-700 font-semibold">FSSAI License No: <span class="text-green-700 font-bold">22423431000209</span></p>
+    <p class="text-gray-700 font-semibold">GST No: <span class="text-green-700 font-bold">33MWVPS5505F1ZW</span></p>
+  </div>
    <div class="mt-8 text-sm text-gray-500">
     <p>&copy; 2024 Shivaayaas Food Products. All Rights Reserved.</p>
-    <p>Designed by <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b" target="_blank" class="text-green-600 hover:underline">Sundarpandi Pandiaraj</a></p>
+   <p>Designed with ❤️ by 
+    <a href="https://www.linkedin.com/in/sundarpandi-pandiyaraj-766a5011b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+       target="_blank" class="text-green-700 hover:underline font-semibold">
+       Sundarpandi Pandiaraj
+    </a>
+  </p>
   </div>
-</div>
+    </div>
 </section>
+
+<!--<footer>
+    <div class="footer-container">
+        <div class="about-section">
+            <h3>👉 "Shivaayaas – Pure Goodness, Naturally!"</h3>
+            <p>💛 "Shivaayaas began as a small dream, built on trust and belief. With the love and support of our customers, we have grown from humble beginnings to serving over 10,000 happy customers today. Every order, every smile, and every word of encouragement gives us the strength to work harder and bring you the best. Shivaayaas isn’t just a brand – it’s a family, and you are a part of our journey!"</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-item">
+                <h4>Safe & Secure</h4>
+                <p>Payments</p>
+            </div>
+            <div class="service-item">
+                <h4>Multiple Payment</h4>
+                <p>Options Available</p>
+            </div>
+            <div class="service-item">
+                <h4>24/7 Support</h4>
+                <p>Customer Assistance</p>
+            </div>
+            <div class="service-item">
+                <h4>Fast Shipping</h4>
+                <p>Nationwide Delivery</p>
+            </div>
+            <div class="service-item">
+                <h4>Best Price</h4>
+                <p>Guaranteed</p>
+            </div>
+        </div>
+        
+        <div class="contact-details">
+            <h4>Follow us on:</h4>
+            <p>Call us: +91-XXXXXXXXXX</p>
+            <p>Email: support@shivaayaas.com</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Shipping & Returns</a>
+        </div>
+    </div>
+ 			
+</footer>-->
+
+
+
+
 <!-- 🛒 Cart Sidebar Modal -->
 <!-- ✅ Cart Modal -->
 <div id="cart-modal" class="fixed inset-0 z-[9999] flex items-start justify-end hidden backdrop-blur-sm">
@@ -532,13 +803,33 @@ View Product
            class="w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg mb-2 block">
           Checkout via WhatsApp
         </a>
-        <button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button>
+		<button id="clear-cart" class="w-full text-center bg-red-100 hover:bg-red-200 text-red-700 py-2 rounded-lg">🧹 Clear Cart</button>
+        <!--<button id="close-cart-bottom" class="w-full text-center bg-gray-200 hover:bg-gray-300 py-2 rounded-lg">Close</button> -->
       </div>
     </div>
   </div>
 </div>
-  
 <script src="./Javascript/all-products.js"></script>
+<script src="./Javascript/home.js"></script>
 <script src="./Javascript/cart.js"></script>
+<script>
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+        window.location.href = "admin-login.html";
+      }
+    });
+  </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-overlay");
+    menu.classList.toggle("hidden");
+  }
+
+  document.getElementById("menu-btn")?.addEventListener("click", toggleMenu);
+</script>
+
+
 </body>
+
 </html>
